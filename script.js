@@ -1,4 +1,5 @@
 const container = document.querySelector('#container');
+const createGridButton = document.querySelector('#createGrid');
 
 function createGrid(size) {
     // create rows
@@ -22,4 +23,11 @@ container.addEventListener("mouseover", (event) => {
     if(target.classList.contains("gridCell")) {
         target.classList.toggle("hovered");
     }
+})
+
+createGridButton.addEventListener("click", () => {
+    container.replaceChildren();
+    let gridSize = +prompt('Size of grid?');
+    if(gridSize > 100) {gridSize = 100};
+    createGrid(gridSize);
 })
