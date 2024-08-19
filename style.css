@@ -1,0 +1,19 @@
+#container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gridRow {
+    display: flex;
+    flex: 1;
+}
+
+.gridCell {
+    flex: 1;
+}
+
+.hovered {
+    background-color: black;
+}
