@@ -21,8 +21,12 @@ createGrid(16);
 container.addEventListener("mouseover", (event) => {
     let target = event.target;
     if(target.classList.contains("gridCell")) {
-        target.classList.toggle("hovered");
-    }
+        //target.classList.toggle("hovered");
+        const r = Math.floor(Math.random()*256);
+        const g = Math.floor(Math.random()*256);
+        const b = Math.floor(Math.random()*256);
+        target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    };
 })
 
 createGridButton.addEventListener("click", () => {
